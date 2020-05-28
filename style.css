@@ -450,6 +450,10 @@ h1 {
 }
 
 @media screen and (max-width: 1280px) {
+    .home {
+        background-position: top;
+    }
+
     .info {
         flex-direction: column;
         align-items: center;
