@@ -334,20 +334,27 @@ h1 {
 }
 
 #project1 {
-    background: url(img/batman.jpg);
+    background: url(img/weather.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #project2 {
-    background: url(img/random.png);
+    background: url(img/batman.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #project3 {
+    background: url(img/random.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#project4 {
     background: url(img/logo.png);
     background-repeat: no-repeat;
     background-position: center;
