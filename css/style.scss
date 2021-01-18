@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$black: #1b1a18;
+$blue: #77aaff;
+$pink: #ff77aa;
+
+@mixin responsive1000px {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+body {
+    color: $black;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+
+    .logo {
+        height: 100px;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .typing-container {
+        height: calc(100vh - 100px - 5%);
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        .typing {
+            display: inline;
+            position: relative;
+            font-size: 75px;
+            margin-left: 10%;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 75px;
+                border-right: 2px solid $black;
+                animation: blink 1s steps(1) infinite;
+    
+                @keyframes blink {
+                    50% {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .color-blocks {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'black-block'
+        'blue-block'
+        'pink-block';
+
+        .black-block {
+            background: $black;
+            grid-area: black-block;
+            transform: translateX(100%);
+            transition: transform 1s ease;
+        }
+
+        .blue-block {
+            background: $blue;
+            grid-area: blue-block;
+            transform: translateX(100%);
+            transition: transform 1.5s ease;
+        }
+
+        .pink-block {
+            background: $pink;
+            grid-area: pink-block;
+            transform: translateX(100%);
+            transition: transform 2s ease;
+        }
+    }
+}
+
+.content {
+    background: $black;
+
+    nav {
+        width: 100%;
+        height: 200px;
+        display: grid;
+        align-items: center;
+
+        ul {
+            display: flex;
+            width: 50%;
+            height: 30px;
+            margin: 0 auto;
+            justify-content: space-between;
+            position: relative;
+
+            li {
+                list-style: none;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                color: white;
+            }
+
+            .underline {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 78px;
+                height: 4px;
+                background: $blue;
+                transition: all 1s ease;
+            }
+        }
+    }
+
+    .content-container {
+        height: 100vh;
+        position: relative;
+
+        .work-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s ease;
+
+            .my-work {
+                display: grid;
+                width: 80%;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 2em;
+
+                .project1 {
+                    position: relative;
+                    background: white;
+                    height: 200px;
+                    overflow: hidden;
+                    border-radius: 8px;
+
+                    &:hover .bio {
+                        height: 80%;
+                    }
+
+                    &:hover .view, .visit {
+                        height: 20%;
+                    }
+
+                    .bio {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 0;
+                        width: 100%;
+                        overflow: hidden;
+                        display: grid;
+                        place-content: center;
+                        background: $black;
+                        color: white;
+                        transition: all 0.75s ease;
+                    }
+
+                    .view {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 50%;
+                        height: 0;
+                        display: grid;
+                        place-content: center;
+                        background: $blue;
+                        color: white;
+                        overflow: hidden;
+                        transition: height 0.5s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: white;
+                            color: $blue;
+                        }
+                    }
+
+                    .visit {
+                        @extend .view;
+                        left: 50%;
+                        background: $pink;
+                        transition: height 1s ease;
+
+                        &:hover {
+                            background: white;
+                            color: $pink;
+                        }
+                    }
+                }
+
+                .project2, .project3 {
+                    @extend .project1;
+                }
+            }
+        }
+
+        .about-container {
+            @extend .work-container;
+            left: 200vw;
+        }
+    }
+}
+
+.contact {
+    height: 100px;
+}

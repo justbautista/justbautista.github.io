@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #1b1a18;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+
+header .logo {
+  height: 100px;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+header .typing-container {
+  height: calc(100vh - 100px - 5%);
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .typing-container .typing {
+  display: inline;
+  position: relative;
+  font-size: 75px;
+  margin-left: 10%;
+}
+
+header .typing-container .typing::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 75px;
+  border-right: 2px solid #1b1a18;
+  -webkit-animation: blink 1s steps(1) infinite;
+          animation: blink 1s steps(1) infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+header .color-blocks {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 'black-block' 'blue-block' 'pink-block';
+}
+
+header .color-blocks .black-block {
+  background: #1b1a18;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: black-block;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+header .color-blocks .blue-block {
+  background: #77aaff;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: blue-block;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 1.5s ease;
+  transition: -webkit-transform 1.5s ease;
+  transition: transform 1.5s ease;
+  transition: transform 1.5s ease, -webkit-transform 1.5s ease;
+}
+
+header .color-blocks .pink-block {
+  background: #ff77aa;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: pink-block;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+.content {
+  background: #1b1a18;
+}
+
+.content nav {
+  width: 100%;
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.content nav ul li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.content nav ul .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 78px;
+  height: 4px;
+  background: #77aaff;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.content .content-container {
+  height: 100vh;
+  position: relative;
+}
+
+.content .content-container .work-container, .content .content-container .about-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.content .content-container .work-container .my-work, .content .content-container .about-container .my-work {
+  display: -ms-grid;
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.content .content-container .work-container .my-work .project1, .content .content-container .about-container .my-work .project1, .content .content-container .work-container .my-work .project2, .content .content-container .about-container .my-work .project2, .content .content-container .work-container .my-work .project3, .content .content-container .about-container .my-work .project3 {
+  position: relative;
+  background: white;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.content .content-container .work-container .my-work .project1:hover .bio, .content .content-container .about-container .my-work .project1:hover .bio, .content .content-container .work-container .my-work .project2:hover .bio, .content .content-container .about-container .my-work .project2:hover .bio, .content .content-container .work-container .my-work .project3:hover .bio, .content .content-container .about-container .my-work .project3:hover .bio {
+  height: 80%;
+}
+
+.content .content-container .work-container .my-work .project1:hover .view, .content .content-container .about-container .my-work .project1:hover .view, .content .content-container .work-container .my-work .project2:hover .view, .content .content-container .about-container .my-work .project2:hover .view, .content .content-container .work-container .my-work .project3:hover .view, .content .content-container .about-container .my-work .project3:hover .view, .content .content-container .work-container .my-work .project1:hover .visit, .content .content-container .about-container .my-work .project1:hover .visit, .content .content-container .work-container .my-work .project2:hover .visit, .content .content-container .about-container .my-work .project2:hover .visit, .content .content-container .work-container .my-work .project3:hover .visit, .content .content-container .about-container .my-work .project3:hover .visit, .content .content-container .work-container .my-work .project1 .visit, .content .content-container .about-container .my-work .project1 .visit, .content .content-container .work-container .my-work .project2 .visit, .content .content-container .about-container .my-work .project2 .visit, .content .content-container .work-container .my-work .project3 .visit, .content .content-container .about-container .my-work .project3 .visit {
+  height: 20%;
+}
+
+.content .content-container .work-container .my-work .project1 .bio, .content .content-container .about-container .my-work .project1 .bio, .content .content-container .work-container .my-work .project2 .bio, .content .content-container .about-container .my-work .project2 .bio, .content .content-container .work-container .my-work .project3 .bio, .content .content-container .about-container .my-work .project3 .bio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #1b1a18;
+  color: white;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+
+.content .content-container .work-container .my-work .project1 .view, .content .content-container .about-container .my-work .project1 .view, .content .content-container .work-container .my-work .project2 .view, .content .content-container .about-container .my-work .project2 .view, .content .content-container .work-container .my-work .project3 .view, .content .content-container .about-container .my-work .project3 .view, .content .content-container .work-container .my-work .project1 .visit, .content .content-container .about-container .my-work .project1 .visit, .content .content-container .work-container .my-work .project2 .visit, .content .content-container .about-container .my-work .project2 .visit, .content .content-container .work-container .my-work .project3 .visit, .content .content-container .about-container .my-work .project3 .visit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #77aaff;
+  color: white;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+  cursor: pointer;
+}
+
+.content .content-container .work-container .my-work .project1 .view:hover, .content .content-container .about-container .my-work .project1 .view:hover, .content .content-container .work-container .my-work .project2 .view:hover, .content .content-container .about-container .my-work .project2 .view:hover, .content .content-container .work-container .my-work .project3 .view:hover, .content .content-container .about-container .my-work .project3 .view:hover, .content .content-container .work-container .my-work .project1 .visit:hover, .content .content-container .about-container .my-work .project1 .visit:hover, .content .content-container .work-container .my-work .project2 .visit:hover, .content .content-container .about-container .my-work .project2 .visit:hover, .content .content-container .work-container .my-work .project3 .visit:hover, .content .content-container .about-container .my-work .project3 .visit:hover {
+  background: white;
+  color: #77aaff;
+}
+
+.content .content-container .work-container .my-work .project1 .visit, .content .content-container .about-container .my-work .project1 .visit, .content .content-container .work-container .my-work .project2 .visit, .content .content-container .about-container .my-work .project2 .visit, .content .content-container .work-container .my-work .project3 .visit, .content .content-container .about-container .my-work .project3 .visit {
+  left: 50%;
+  background: #ff77aa;
+  -webkit-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
+.content .content-container .work-container .my-work .project1 .visit:hover, .content .content-container .about-container .my-work .project1 .visit:hover, .content .content-container .work-container .my-work .project2 .visit:hover, .content .content-container .about-container .my-work .project2 .visit:hover, .content .content-container .work-container .my-work .project3 .visit:hover, .content .content-container .about-container .my-work .project3 .visit:hover {
+  background: white;
+  color: #ff77aa;
+}
+
+.content .content-container .about-container {
+  left: 200vw;
+}
+
+.contact {
+  height: 100px;
+}

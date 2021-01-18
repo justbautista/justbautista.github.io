@@ -1,159 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlscroll">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="HandheldFriendly" content="true">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="shortcut icon" href="img/logo.png">
-    <script src="main.js" defer></script>
     <title>Justin Bautista</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type='text/javascript' src='app.js' defer></script>
 </head>
 <body>
-    <div class="content">
-        <div class="home" id="home">
-            <nav>
-                <img src="img/logo.png" width="100">
-                <ul id="navlink">
-                    <li><a href="#about" onclick="toggle()">About</a></li>
-                    <li><a href="#projects" onclick="toggle()">Projects</a></li>
-                    <li><a href="resume.pdf" onclick="toggle()" target="blank">Resume</a></li>
-                    <li><a href="#contact" onclick="toggle()">Contact</a></li>
-                </ul>
-                <div class="burger" onclick="toggle()">
-                    <div id="t"></div>
-                    <div id="m"></div>
-                    <div id="b"></div>
-                </div>
-            </nav>
-            <div class="intro">
-                <h2>Hi,</h2>
-                <h2>I'm <span>Justin Bautista</span></h2>
-                <h3>Student | Developer | Engineer</h3>
-            </div>
-            <a href="#home" id="back-to-top">
-                <i class="fas fa-chevron-up"></i>
-            </a>
+    <header>
+        <img src="img/logo.jpg" alt="logo" class='logo'>
+
+        <div class="typing-container">
+            <h1 class='typing'></h1>
         </div>
-        <div class="about" id="about">
-            <h1>About</h1>
-            <div class="info">
-                <div class="me">
-                    <img src="img/avatar.jpg" width="125">
-                    <div id="bio">
-                        As a computer science student at New Jersey Institute of
-                        Technology, I aspire to become a software engineer. I love 
-                        helping out my peers and taking on challenging projects to 
-                        sharpen and widen my skillset. 
+
+        <div class="color-blocks">
+            <div class="pink-block"></div>
+            <div class="blue-block"></div>
+            <div class="black-block"></div>
+        </div>
+    </header>
+    
+    <section class='content'>
+        <nav>
+            <ul>
+                <li class='work-link'>My Work</li>
+                <li class='about-link'>About Me</li>
+                <div class="underline"></div>
+            </ul>
+        </nav>
+
+        <div class="content-container">
+            <div class="work-container">
+                <div class="my-work">
+
+                    <div class="project1">
+                        <div class="bio">
+                            <p>
+                                Bio
+                            </p>
+                        </div>
+                        <div class="view">View Code</div>
+                        <div class="visit">Visit Website</div>
                     </div>
-                </div>
-                <div class="skills">
-                    <div id="one">
-                        <p>HTML</p>
-                        <p>CSS</p>
+                   
+                    <div class="project2">
+                        <div class="bio">
+                            <p>
+                                Bio
+                            </p>
+                        </div>
+                        <div class="view">View Code</div>
+                        <div class="visit">Visit Website</div>
                     </div>
-                    <div id="two">
-                        <p>JavaScript</p>
-                    </div>
-                    <div id="one">
-                        <p>Python</p>
-                    </div>
-                    <div id="two">
-                        <p>C++</p>
-                    </div>
-                    <div id="one">
-                        <p>Java</p>
-                    </div>
-                    <div id="two">
-                        <p>Git</p>
+
+                    <div class="project3">
+                        <div class="bio">
+                            <p>
+                                Bio
+                            </p>
+                        </div>
+                        <div class="view">View Code</div>
+                        <div class="visit">Visit Website</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="projects" id="projects">
-            <h1>Projects</h1>
-            <div class="project-boxes">
-                <div class="box" id="project1">
-                    <div class="project-bio">
-                        <h3>iWeatherForecast</h3>
-                        <div class="links">
-                            <a href="https://github.com/justbautista/iweatherforecast" target="blank"><i class="fab fa-github"></i></a>
-                            <a href="https://iweatherforecast.web.app/" target="blank"><p>Visit Site</p></a>
-                        </div>
-                        <div class="stuff-used">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                            <p>OpenWeatherMap API (JSON)</p>
-                        </div>
-                    </div>                
+            <div class="about-container">
+                <div class="about-me">
+                    about mee
                 </div>
-                <div class="box" id="project2">
-                    <div class="project-bio">
-                        <h3>Batman</h3>
-                        <div class="links">
-                            <a href="https://github.com/justbautista/batman" target="blank"><i class="fab fa-github"></i></a>
-                            <a href="http://justbautista.github.io/batman" target="blank"><p>Visit Site</p></a>
-                        </div>
-                        <div class="stuff-used">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                        </div>
-                    </div>                
-                </div>
-                <div class="box" id="project3">
-                    <div class="project-bio">
-                        <h3>Random Person Generator</h3>
-                        <div class="links">
-                            <a href="https://github.com/justbautista/randompersongenerator" target="blank"><i class="fab fa-github"></i></a>
-                            <a href="http://justbautista.github.io/randompersongenerator" target="blank"><p>Visit Site</p></a>
-                        </div>
-                        <div class="stuff-used">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                            <p>Random User API (JSON)</p>
-                        </div>
-                    </div>     
-                </div>
-                <!-- <div class="box" id="project4">
-                    <div class="project-bio">
-                        <h3>Portfolio</h3>
-                        <div class="links">
-                            <a href="https://github.com/justbautista/justbautista.github.io" target="blank"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="stuff-used">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                        </div>
-                    </div>   
-                </div> -->
             </div>
         </div>
-        <div class="contact" id="contact">
-            <a href="https://github.com/justbautista" target="blank">
-            <div class="contact-icon" id="github">
-                <i class="fab fa-github"></i>
-                <p>Github</p>
-            </div>
-            </a>
-            <a href="https://www.linkedin.com/in/jcb1/" target="blank">
-            <div class="contact-icon" id="linkedin">
-                <i class="fab fa-linkedin-in"></i>
-                <p>Linkedin</p>
-            </div>
-            </a>
-            <a href="mailto:justinbautista923@gmail.com" target="blank">
-            <div class="contact-icon" id="mail">
-                <i class="far fa-envelope"></i>
-                <p>Mail</p>
-            </div>
-            </a>
-        </div>
-    </div>
+    </section>
+
+    <section class="contact">
+        contact
+    </section>
 </body>
 </html>
