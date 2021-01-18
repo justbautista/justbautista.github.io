@@ -14,14 +14,14 @@ const type = () => {
 }
 
 const blocks = () => {
-    document.querySelector('.black-block').style.transform = 'translateX(0)';
+    document.querySelector('.black-block').style.left = '0';
     document.querySelector('.blue-block').style.transform = 'translateX(0)';
     document.querySelector('.pink-block').style.transform = 'translateX(0)';
 }
 
 window.addEventListener('load', () => {
     type();
-    setTimeout(blocks, 400);
+    blocks();
 });
 
 const work = document.querySelector('.work-link');

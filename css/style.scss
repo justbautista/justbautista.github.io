@@ -83,8 +83,12 @@ header {
         .black-block {
             background: $black;
             grid-area: black-block;
-            transform: translateX(100%);
-            transition: transform 1s ease;
+            height: 100%; 
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            // transform: translateX(100%);
+            transition: all 1s ease;
         }
 
         .blue-block {

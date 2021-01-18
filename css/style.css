@@ -87,12 +87,12 @@ header .color-blocks .black-block {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: black-block;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 header .color-blocks .blue-block {
