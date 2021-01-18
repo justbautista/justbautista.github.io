@@ -20,10 +20,9 @@ const blocks = () => {
 }
 
 window.addEventListener('load', () => {
-    type();
     blocks();
+    type();
 });
-
 
 const work = document.querySelector('.work-link');
 const about = document.querySelector('.about-link');
