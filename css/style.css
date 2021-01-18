@@ -7,9 +7,14 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: #1b1a18;
   overflow-x: hidden;
+  width: 100%;
 }
 
 header {

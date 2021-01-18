@@ -3,11 +3,6 @@ let i = 0;
 let letter = '';
 let speed = 150;
 
-window.addEventListener('load', () => {
-    type();
-    blocks();
-});
-
 const type = () => {
     letter = text.slice(0, ++i);
     document.querySelector('.typing').textContent = letter;
@@ -23,6 +18,11 @@ const blocks = () => {
     document.querySelector('.blue-block').style.transform = 'translateX(0)';
     document.querySelector('.pink-block').style.transform = 'translateX(0)';
 }
+
+window.addEventListener('load', () => {
+    type();
+    blocks();
+});
 
 
 const work = document.querySelector('.work-link');
