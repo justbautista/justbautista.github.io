@@ -21,7 +21,7 @@ const blocks = () => {
 
 window.addEventListener('load', () => {
     type();
-    setTimeout(blocks, 100);
+    setTimeout(blocks, 400);
 });
 
 const work = document.querySelector('.work-link');
