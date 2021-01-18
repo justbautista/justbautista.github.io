@@ -20,8 +20,8 @@ const blocks = () => {
 }
 
 window.addEventListener('load', () => {
-    blocks();
     type();
+    setTimeout(blocks, 100);
 });
 
 const work = document.querySelector('.work-link');
