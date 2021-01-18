@@ -29,11 +29,16 @@ const blocks = () => {
     document.querySelector('.pink-block').style.left = '0';
 }
 
+const initUnderline = () => {
+    workWidth = work.offsetWidth + 'px';
+    underline.style.width = workWidth; 
+    underline.style.left = '0';
+}
+
 window.addEventListener('load', () => {
     type();
     blocks();
-    workWidth = work.offsetWidth + 'px';
-    underline.style.width = workWidth; 
+    initUnderline();
 });
 
 window.addEventListener('resize', () => {
