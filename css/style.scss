@@ -83,26 +83,25 @@ header {
         .black-block {
             background: $black;
             grid-area: black-block;
+            position: absolute;
             height: 100%; 
             width: 100%;
-            position: absolute;
             left: 100%;
-            // transform: translateX(100%);
-            transition: all 1s ease;
+            transition: left 1s ease;
         }
 
         .blue-block {
+            @extend .black-block;
             background: $blue;
             grid-area: blue-block;
-            transform: translateX(100%);
-            transition: transform 1.5s ease;
+            transition: left 1.5s ease;
         }
 
         .pink-block {
+            @extend .black-block;
             background: $pink;
             grid-area: pink-block;
-            transform: translateX(100%);
-            transition: transform 2s ease;
+            transition: left 2s ease;
         }
     }
 }
