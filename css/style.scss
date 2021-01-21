@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'media-queries';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -15,12 +16,6 @@ $black: #1b1a18;
 $blue: #77aaff;
 $pink: #ff77aa;
 
-@mixin responsive1000px {
-    @media screen and (max-width: 1000px) {
-        @content;
-    }
-}
-
 body {
     color: $black;
     overflow-x: hidden;
@@ -29,6 +24,7 @@ body {
 
 header {
     height: 100vh;
+    min-height: 750px;
     position: relative;
 
     .logo {
@@ -38,7 +34,7 @@ header {
     }
 
     .typing-container {
-        height: calc(100vh - 100px - 5%);
+        height: calc(750px - 100px);
         width: 50%;
         display: flex;
         align-items: center;
@@ -48,6 +44,10 @@ header {
             position: relative;
             font-size: 75px;
             margin-left: 10%;
+
+            @include width400 {
+                font-size: 50px;
+            }
     
             &::after {
                 content: '';
@@ -117,11 +117,19 @@ header {
 
         ul {
             display: flex;
-            width: 50%;
+            width: 25%;
             height: 30px;
             margin: 0 auto;
             justify-content: space-between;
             position: relative;
+
+            @include width1000 {
+                width: 50%;
+            }
+
+            @include width400 {
+                width: 75%;
+            }
 
             li {
                 list-style: none;
@@ -145,7 +153,23 @@ header {
 
     .content-container {
         position: relative;
-        height: 100vh;
+        height: calc(85px + 1*(2em) + 2*(250px));
+
+        @include width1300 {
+            height: calc(85px + 2*(2em) + 3*(250px));
+        }
+
+        @include width1000 {
+            height: calc(85px + 5*(2em) + 6*(250px));
+        }
+
+        @include width500 {
+            height: calc(85px + 5*(2em) + 6*(200px));
+        }
+
+        @include width400 {
+            height: calc(85px + 5*(2em) + 6*(180px));
+        }
 
         .work-container {
             width: 100%;
@@ -157,10 +181,24 @@ header {
 
             .my-work {
                 display: grid;
-                width: 80%;
+                width: 1215px;
                 margin: 0 auto;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 2em;
+
+                @include width1300 {
+                    grid-template-columns: 1fr 1fr;
+                    width: 940px;
+                }
+
+                @include width1000 {
+                    grid-template-columns: 1fr;
+                    width: 485px;
+                }
+
+                @include width600 {
+                    width: 75%;
+                }
 
                 .project-container {
                     position: relative;
@@ -168,6 +206,14 @@ header {
                     height: 250px;
                     overflow: hidden;
                     border-radius: 10px;
+
+                    @include width500 {
+                        height: 200px;
+                    }
+
+                    @include width400 {
+                        height: 180px;
+                    }
 
                     &:hover .bio {
                         height: 80%;
@@ -242,6 +288,14 @@ header {
                         margin: 0 auto;
                         border-radius: 10px;
                         box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+                    
+                        @include width500 {
+                            height: 65%;
+                        }
+
+                        @include width400 {
+                            height: 55%;
+                        }
                     }
                 }
 
@@ -273,12 +327,30 @@ header {
                         top: 25%;
                         left: 10%;
                         height: 90%;
+
+                        @include width1300 {
+                            left: 60px;
+                        }
+
+                        @include width600 {
+                            display: none;
+                        }
                     }
 
                     #mobile {
                         position: absolute;
                         right: 10%;
                         height: 70%;
+
+                        @include width1300 {
+                            height: 75%;
+                            right: 60px;
+                        }
+
+                        @include width600 {
+                            height: 90%;
+                            position: static;
+                        }
                     }
                 }
 
@@ -303,6 +375,14 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include width1000 {
+            width: 40%;
+        }
+
+        @include width500 {
+            width: 50%;
+        }
         
         .github {
             color: $black;

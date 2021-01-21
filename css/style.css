@@ -19,6 +19,7 @@ body {
 
 header {
   height: 100vh;
+  min-height: 750px;
   position: relative;
 }
 
@@ -29,7 +30,7 @@ header .logo {
 }
 
 header .typing-container {
-  height: calc(100vh - 100px - 5%);
+  height: calc(750px - 100px);
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,6 +45,12 @@ header .typing-container .typing {
   position: relative;
   font-size: 75px;
   margin-left: 10%;
+}
+
+@media screen and (max-width: 400px) {
+  header .typing-container .typing {
+    font-size: 50px;
+  }
 }
 
 header .typing-container .typing::after {
@@ -131,13 +138,25 @@ header .color-blocks .pink-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 25%;
   height: 30px;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .content nav ul {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content nav ul {
+    width: 75%;
+  }
 }
 
 .content nav ul li {
@@ -161,7 +180,31 @@ header .color-blocks .pink-block {
 
 .content .content-container {
   position: relative;
-  height: 100vh;
+  height: calc(85px + 1*(2em) + 2*(250px));
+}
+
+@media screen and (max-width: 1300px) {
+  .content .content-container {
+    height: calc(85px + 2*(2em) + 3*(250px));
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container {
+    height: calc(85px + 5*(2em) + 6*(250px));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content .content-container {
+    height: calc(85px + 5*(2em) + 6*(200px));
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container {
+    height: calc(85px + 5*(2em) + 6*(180px));
+  }
 }
 
 .content .content-container .work-container, .content .content-container .about-container {
@@ -177,11 +220,33 @@ header .color-blocks .pink-block {
 .content .content-container .work-container .my-work, .content .content-container .about-container .my-work {
   display: -ms-grid;
   display: grid;
-  width: 80%;
+  width: 1215px;
   margin: 0 auto;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
+}
+
+@media screen and (max-width: 1300px) {
+  .content .content-container .work-container .my-work, .content .content-container .about-container .my-work {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 940px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .work-container .my-work, .content .content-container .about-container .my-work {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 485px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .content-container .work-container .my-work, .content .content-container .about-container .my-work {
+    width: 75%;
+  }
 }
 
 .content .content-container .work-container .my-work .project-container, .content .content-container .about-container .my-work .project-container {
@@ -190,6 +255,18 @@ header .color-blocks .pink-block {
   height: 250px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .content .content-container .work-container .my-work .project-container, .content .content-container .about-container .my-work .project-container {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .work-container .my-work .project-container, .content .content-container .about-container .my-work .project-container {
+    height: 180px;
+  }
 }
 
 .content .content-container .work-container .my-work .project-container:hover .bio, .content .content-container .about-container .my-work .project-container:hover .bio {
@@ -277,6 +354,18 @@ header .color-blocks .pink-block {
           box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 }
 
+@media screen and (max-width: 500px) {
+  .content .content-container .work-container .my-work .thumbnail-container .thumbnail, .content .content-container .about-container .my-work .thumbnail-container .thumbnail {
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .work-container .my-work .thumbnail-container .thumbnail, .content .content-container .about-container .my-work .thumbnail-container .thumbnail {
+    height: 55%;
+  }
+}
+
 .content .content-container .work-container .my-work #project1, .content .content-container .about-container .my-work #project1 {
   background: #A6654E;
 }
@@ -308,10 +397,36 @@ header .color-blocks .pink-block {
   height: 90%;
 }
 
+@media screen and (max-width: 1300px) {
+  .content .content-container .work-container .my-work #project6 #closeup, .content .content-container .about-container .my-work #project6 #closeup {
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .content-container .work-container .my-work #project6 #closeup, .content .content-container .about-container .my-work #project6 #closeup {
+    display: none;
+  }
+}
+
 .content .content-container .work-container .my-work #project6 #mobile, .content .content-container .about-container .my-work #project6 #mobile {
   position: absolute;
   right: 10%;
   height: 70%;
+}
+
+@media screen and (max-width: 1300px) {
+  .content .content-container .work-container .my-work #project6 #mobile, .content .content-container .about-container .my-work #project6 #mobile {
+    height: 75%;
+    right: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .content-container .work-container .my-work #project6 #mobile, .content .content-container .about-container .my-work #project6 #mobile {
+    height: 90%;
+    position: static;
+  }
 }
 
 .content .content-container .about-container {
@@ -341,6 +456,18 @@ header .color-blocks .pink-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact .contact-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact .contact-container {
+    width: 50%;
+  }
 }
 
 .contact .contact-container .github, .contact .contact-container .linkedin, .contact .contact-container .mail {

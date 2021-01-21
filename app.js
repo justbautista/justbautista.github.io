@@ -1,4 +1,4 @@
-const text = 'Hi, I am Justin I am a developer';
+const text = "Hi, I'm Justin, I am a developer";
 let i = 0;
 let letter = '';
 let speed = 150;
