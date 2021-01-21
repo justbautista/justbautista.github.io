@@ -29,6 +29,12 @@ header .logo {
   margin-top: 5%;
 }
 
+@media screen and (max-width: 1000px) {
+  header .logo {
+    height: 75px;
+  }
+}
+
 header .typing-container {
   height: calc(750px - 100px);
   width: 50%;
