@@ -47,9 +47,9 @@ header .typing-container .typing {
   margin-left: 10%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   header .typing-container .typing {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 
@@ -63,9 +63,9 @@ header .typing-container .typing::after {
           animation: blink 1s steps(1) infinite;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   header .typing-container .typing::after {
-    height: 50px;
+    height: 60px;
   }
 }
 
