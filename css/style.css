@@ -47,7 +47,7 @@ header .typing-container .typing {
   margin-left: 10%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   header .typing-container .typing {
     font-size: 50px;
   }
@@ -61,6 +61,12 @@ header .typing-container .typing::after {
   border-right: 2px solid #1b1a18;
   -webkit-animation: blink 1s steps(1) infinite;
           animation: blink 1s steps(1) infinite;
+}
+
+@media screen and (max-width: 500px) {
+  header .typing-container .typing::after {
+    height: 50px;
+  }
 }
 
 @-webkit-keyframes blink {

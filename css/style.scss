@@ -45,7 +45,7 @@ header {
             font-size: 75px;
             margin-left: 10%;
 
-            @include width400 {
+            @include width500 {
                 font-size: 50px;
             }
     
@@ -56,6 +56,10 @@ header {
                 height: 75px;
                 border-right: 2px solid $black;
                 animation: blink 1s steps(1) infinite;
+
+                @include width500 {
+                    height: 50px;
+                }
     
                 @keyframes blink {
                     50% {
