@@ -443,6 +443,229 @@ header .color-blocks .pink-block {
 
 .content .content-container .about-container {
   left: 200vw;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container {
+    display: block;
+  }
+}
+
+.content .content-container .about-container .about-me {
+  height: 617px;
+  width: 912px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container .about-me {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content .content-container .about-container .about-me {
+    -ms-grid-rows: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .about-container .about-me {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.content .content-container .about-container .about-me .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 310px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container .about-me .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+}
+
+.content .content-container .about-container .about-me .profile .profile-pic {
+  width: 280px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container .about-me .profile .profile-pic {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content .content-container .about-container .about-me .profile .profile-pic {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .about-container .about-me .profile .profile-pic {
+    width: 300px;
+  }
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 550px;
+  height: 100%;
+  margin-left: auto;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container .about-me .profile .profile-bio {
+    margin-left: unset;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .content-container .about-container .about-me .profile .profile-bio {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .about-container .about-me .profile .profile-bio {
+    font-size: 20px;
+  }
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio span {
+  color: #77aaff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio .resume {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 300px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #1b1a18;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .about-container .about-me .profile .profile-bio .resume {
+    width: 250px;
+  }
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio .resume span {
+  color: white;
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio .resume:hover span {
+  color: #1b1a18;
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio .resume:hover::before {
+  left: 0;
+}
+
+.content .content-container .about-container .about-me .profile .profile-bio .resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.content .content-container .about-container .skills {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .content-container .about-container .skills {
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content .content-container .about-container .skills {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content .content-container .about-container .skills {
+    width: 80%;
+  }
+}
+
+.content .content-container .about-container .skills .wrapper {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 100px;
+}
+
+.content .content-container .about-container .skills .wrapper .skill {
+  width: 50px;
 }
 
 .contact {
