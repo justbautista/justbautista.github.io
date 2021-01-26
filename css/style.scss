@@ -464,6 +464,7 @@ header {
                             overflow: hidden;
                             cursor: pointer;
                             position: relative;
+                            text-decoration: none;
 
                             @include width400 {
                                 width: 250px;

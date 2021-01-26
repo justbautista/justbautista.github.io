@@ -589,6 +589,7 @@ header .color-blocks .pink-block {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 400px) {
