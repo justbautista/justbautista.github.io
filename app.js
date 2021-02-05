@@ -1,7 +1,7 @@
 const text = "Hi, I'm Justin, I am a developer";
 let i = 0;
 let letter = '';
-let speed = 150;
+let speed = 200;
 
 const work = document.querySelector('.work-link');
 const about = document.querySelector('.about-link');
@@ -13,33 +13,17 @@ let right = (ul.offsetWidth - about.offsetWidth) + 'px';
 let aboutWidth = about.offsetWidth + 'px';
 let workWidth = work.offsetWidth + 'px';
 
-const type = () => {
-    letter = text.slice(0, ++i);
-    document.querySelector('.typing').textContent = letter;
-
-    if (letter.length === text.length.length) {
-        return;
-    }
-    setTimeout(type, speed);
-}
-
-const blocks = () => {
-    document.querySelector('.black-block').style.left = '0';
-    document.querySelector('.blue-block').style.left = '0';
-    document.querySelector('.pink-block').style.left = '0';
-}
+window.addEventListener('load', () => {
+    type();
+    blocks();
+    initUnderline();
+});
 
 const initUnderline = () => {
     workWidth = work.offsetWidth + 'px';
     underline.style.width = workWidth; 
     underline.style.left = '0';
 }
-
-window.addEventListener('load', () => {
-    type();
-    blocks();
-    initUnderline();
-});
 
 window.addEventListener('resize', () => {
     right = (ul.offsetWidth - about.offsetWidth) + 'px'; 
@@ -75,3 +59,21 @@ work.addEventListener('click', () => {
     aboutContainer.style.left = '200vw';
     workContainer.style.left = '0';
 });
+
+const type = () => {
+    letter = text.slice(0, ++i);
+    document.querySelector('.typing').textContent = letter;
+
+    if (letter.length === text.length.length) {
+        return;
+    }
+    setTimeout(type, speed);
+}
+
+const blocks = () => {
+    document.querySelector('.black-block').style.left = '0';
+    document.querySelector('.blue-block').style.left = '0';
+    document.querySelector('.pink-block').style.left = '0';
+}
+
+
