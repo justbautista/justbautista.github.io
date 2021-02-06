@@ -14,9 +14,9 @@ let aboutWidth = about.offsetWidth + 'px';
 let workWidth = work.offsetWidth + 'px';
 
 window.addEventListener('load', () => {
+    initUnderline();
     type();
     blocks();
-    initUnderline();
 });
 
 const initUnderline = () => {
