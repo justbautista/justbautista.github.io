@@ -1,7 +1,7 @@
 const text = "Hi, I'm Justin, I am a developer";
 let i = 0;
 let letter = '';
-let speed = 200;
+let speed = 100;
 
 const work = document.querySelector('.work-link');
 const about = document.querySelector('.about-link');
@@ -41,6 +41,7 @@ window.addEventListener('resize', () => {
 });
 
 about.addEventListener('click', () => {
+    aboutWidth = about.offsetWidth + 'px';
     underline.style.transition = 'all 1s ease';
     underline.style.width = aboutWidth;
     underline.style.left = right;
@@ -51,6 +52,7 @@ about.addEventListener('click', () => {
 });
 
 work.addEventListener('click', () => {
+    workWidth = work.offsetWidth + 'px';
     underline.style.transition = 'all 1s ease';
     underline.style.width = workWidth;
     underline.style.left = '0';
