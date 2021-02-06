@@ -28,6 +28,7 @@ const initUnderline = () => {
 window.addEventListener('resize', () => {
     right = (ul.offsetWidth - about.offsetWidth) + 'px'; 
     aboutWidth = about.offsetWidth + 'px';
+    workWidth = work.offsetWidth + 'px';
     underline.style.transition = 'none';
 
     if (underline.style.width === workWidth) {
@@ -42,6 +43,7 @@ window.addEventListener('resize', () => {
 
 about.addEventListener('click', () => {
     aboutWidth = about.offsetWidth + 'px';
+    right = (ul.offsetWidth - about.offsetWidth) + 'px';
     underline.style.transition = 'all 1s ease';
     underline.style.width = aboutWidth;
     underline.style.left = right;
