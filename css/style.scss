@@ -503,6 +503,7 @@ header {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                justify-content: center;
 
                 @include width1000 {
                     height: 50%;
