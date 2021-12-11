@@ -98,7 +98,7 @@ header .color-blocks {
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: 'black-block' 'blue-block' 'pink-block';
+      grid-template-areas: 'black-block' 'blue-block' 'pink-block';
 }
 
 header .color-blocks .black-block, header .color-blocks .blue-block, header .color-blocks .pink-block {
@@ -378,6 +378,10 @@ header .color-blocks .pink-block {
   }
 }
 
+.content .content-container .work-container .my-work #project0, .content .content-container .about-container .my-work #project0 {
+  background: #1db954;
+}
+
 .content .content-container .work-container .my-work #project1, .content .content-container .about-container .my-work #project1 {
   background: #A6654E;
 }
@@ -406,7 +410,7 @@ header .color-blocks .pink-block {
   position: absolute;
   top: 25%;
   left: 10%;
-  height: 90%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -424,12 +428,12 @@ header .color-blocks .pink-block {
 .content .content-container .work-container .my-work #project6 #mobile, .content .content-container .about-container .my-work #project6 #mobile {
   position: absolute;
   right: 10%;
-  height: 70%;
+  height: 80%;
 }
 
 @media screen and (max-width: 1300px) {
   .content .content-container .work-container .my-work #project6 #mobile, .content .content-container .about-container .my-work #project6 #mobile {
-    height: 75%;
+    height: 80%;
     right: 60px;
   }
 }
@@ -755,3 +759,4 @@ header .color-blocks .pink-block {
 .contact .contact-container .mail::before {
   background: #ff77aa;
 }
+/*# sourceMappingURL=style.css.map */

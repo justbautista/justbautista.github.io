@@ -307,6 +307,10 @@ header {
                     }
                 }
 
+                #project0 {
+                    background: #1db954;
+                }
+
                 #project1 {
                     background: #A6654E;
                 }
@@ -334,7 +338,7 @@ header {
                         position: absolute;
                         top: 25%;
                         left: 10%;
-                        height: 90%;
+                        height: 100%;
 
                         @include width1300 {
                             left: 60px;
@@ -348,10 +352,10 @@ header {
                     #mobile {
                         position: absolute;
                         right: 10%;
-                        height: 70%;
+                        height: 80%;
 
                         @include width1300 {
-                            height: 75%;
+                            height: 80%;
                             right: 60px;
                         }
 
