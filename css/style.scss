@@ -227,7 +227,11 @@ header {
                         height: 80%;
                     }
 
-                    &:hover .view, .visit {
+                    &:hover .view {
+                        height: 20%;
+                    }
+
+                    &:hover .visit {
                         height: 20%;
                     }
 
@@ -282,6 +286,18 @@ header {
                             color: $pink;
                         }
                     }
+
+                    .only-visit {
+                        @extend .view;
+                        width: 100%;
+                        background: $pink;
+                        transition: height 1s ease;
+
+                        &:hover {
+                            background: white;
+                            color: $pink;
+                        }
+                    }
                 }
 
                 .thumbnail-container {
@@ -316,7 +332,7 @@ header {
                 }
 
                 #project2 {
-                    background: #8C8369;
+                    background: #f96c70;
                 }
 
                 #project3 {
@@ -324,7 +340,7 @@ header {
                 }
 
                 #project4 {
-                    background: #2E56A6;
+                    background: #fb7b05;
                 }
 
                 #project5 {
